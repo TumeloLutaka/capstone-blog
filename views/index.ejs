@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs")  %>
+
+<section class="main">
+    <div class="container">
+        <h1>Posts</h1>
+        <ul>
+            <% posts.forEach( (post, index) => { %>
+            <li>
+                    <h2><%= post.title %></h2>
+                    <p class="content"> <%= post.content %></p>
+                    <p class="author-text"> <%= post.author %> | <%= post.createdAt   %></p>
+                    <div class="button-container">
+                        <a class="btn btn-edit" href="edit/<%= index%>">Edit</a>
+                        <a class="btn btn-danger" href="delete/<%= index%>">Delete</a>
+                    </div>
+                    <div class="divider"></div>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs")  %>

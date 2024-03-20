@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs")  %>
+
+<section class="main">
+    <div class="container">
+        <h1>Create Post</h1>
+
+        <form action="/" method="POST" class="form">
+            <input type="text" name="title" placeholder="Title" required>
+            <textarea name="content" cols="30" rows="10" placeholder="Content" required></textarea>
+            <input type="text" name="author" placeholder="Author" required>
+            <div class="btn-container">
+                <button class="btn btn-primary" type="submit">Create</button>
+                <a class="btn btn-danger" href="/">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs")  %>

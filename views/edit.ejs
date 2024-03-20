@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs")  %>
+
+<section class="main">
+    <div class="container">
+        <h1>Edit Post</h1>
+
+        <form action="/edit" method="post" class="form">
+            <input type="hidden" name="index" value="<%= index %>">
+            <input type="hidden" name="createdAt" value="<%= post.createdAt %>">
+            <input type="text" name="title" value="<%=post.title%>" required>
+            <textarea name="content" cols="30" rows="10" required><%=post.content%></textarea>
+            <input type="text" name="author" value="<%=post.author%>" required>
+            <div class="btn-container">
+                <button class="btn btn-primary" type="submit">Save</button>
+                <a class="btn btn-danger" href="/">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs")  %>
